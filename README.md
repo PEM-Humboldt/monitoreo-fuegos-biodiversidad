@@ -12,6 +12,7 @@ output:
     toc: true
 ---
 
+- [1. Organizar directorio de trabajo](#organizar-directorio-de-trabajo)
 - [2. Organizar entorno de trabajo](#organizar-entorno-de-trabajo)
   - [2.1 Cargar librerias/paquetes necesarios para el
     análisis](#cargar-libreriaspaquetes-necesarios-para-el-análisis)
@@ -40,8 +41,11 @@ se almacenarán en la carpeta
 [script/output](https://github.com/vicjulrin/MonitoreoFuegosBiodiversidad/tree/main/script/output)
 sobre la misma raíz del código.
 
-<a id="ID_seccion1"></a> \## 1. Organizar directorio de trabajo Las
-entradas de ejemplo de este ejercicio están almacenadas en
+<a id="organizar-directorio-de-trabajo"></a>
+
+## 1. Organizar directorio de trabajo
+
+Las entradas de ejemplo de este ejercicio están almacenadas en
 [https://drive.google.com/drive/home](https://github.com/vicjulrin/MonitoreoFuegosBiodiversidad/tree/main/script/input).
 Están organizadas de esta manera que facilita la ejecución del código:
 
@@ -93,7 +97,7 @@ automáticamente a partir de la ubicación del código. Esto significa que
 tomará como “dir_work” la carpeta raiz donde se almacena el código
 “~/scripts. De esta manera, se garantiza que la ejecución se realice
 bajo la misma organización descrita en el paso de [1.Organizar el
-directorio de trabajo](#ID_seccion1))
+directorio de trabajo](#organizar-directorio-de-trabajo))
 
 ``` r
 # Establecer directorio

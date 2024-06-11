@@ -11,11 +11,15 @@ output:
     preserve_yaml: true
     toc: true
 ---
+
+
+
 Este flujo de trabajo se desarrolló para monitorear la biodiversidad potencial asociada a puntos de fuego en Colombia. Sin embargo, en el momento que se generó la información de fuegos no estaba disponible, por lo que se estimó a partir de datos de puntos de calor. Este flujo permite la estimación de métricas de biodiversidad asociada a los puntos que se dispongan desde un análisis respaldado en la información de Biomodelos y ecosistemas amenazados, en relación con Biomas IAvH como unidad ecológica de análisis.
 
 El flujo de trabajo está desarrollado en R software y automatizado para analizarse en cualquier ventana espacial de análisis (por ejemplo, departamentos) y temporal de análisis (dependiendo de los puntos de entrada). Este documento parte de un ejemplo con una ventana espacial de departamento (Antioquia) para la explicación detallada de cada paso, y finaliza con un loop de estimación para todos los departamentos de Colombia. Las entradas deben organizarse en una carpeta raíz [script/input](https://github.com/vicjulrin/MonitoreoFuegosBiodiversidad/tree/main/script/input), y nombrarse explícitamente en la parte inicial del código. Las salidas se almacenarán en la carpeta [script/output](https://github.com/vicjulrin/MonitoreoFuegosBiodiversidad/tree/main/script/output) sobre la misma raíz del código.
 
-<a id="ID_seccion1"></a>
+<a id="organizar-directorio-de-trabajo"></a>
+
 ## 1. Organizar directorio de trabajo
 Las entradas de ejemplo de este ejercicio están almacenadas en [https://drive.google.com/drive/home](https://github.com/vicjulrin/MonitoreoFuegosBiodiversidad/tree/main/script/input). Están organizadas de esta manera que facilita la ejecución del código:
 
@@ -62,7 +66,7 @@ lapply(packages_list, library, character.only = TRUE)
 ```
 
 ### 2.2 Establecer directorios de trabajo
-El flujo de trabajo está diseñado para establecer el entorno de trabajo automáticamente a partir de la ubicación del código. Esto significa que tomará como "dir_work" la carpeta raiz donde se almacena el código “~/scripts. De esta manera, se garantiza que la ejecución se realice bajo la misma organización descrita en el paso de [1.Organizar el directorio de trabajo](#ID_seccion1))
+El flujo de trabajo está diseñado para establecer el entorno de trabajo automáticamente a partir de la ubicación del código. Esto significa que tomará como "dir_work" la carpeta raiz donde se almacena el código “~/scripts. De esta manera, se garantiza que la ejecución se realice bajo la misma organización descrita en el paso de [1.Organizar el directorio de trabajo](#organizar-directorio-de-trabajo))
 
 ```{r,  eval=F, echo=T, results='hide', warning= F, message = F}
 # Establecer directorio
