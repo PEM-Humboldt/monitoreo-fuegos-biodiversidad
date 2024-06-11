@@ -16,7 +16,7 @@ Este flujo de trabajo se desarrolló para monitorear la biodiversidad potencial 
 El flujo de trabajo está desarrollado en R software y automatizado para analizarse en cualquier ventana espacial de análisis (por ejemplo, departamentos) y temporal de análisis (dependiendo de los puntos de entrada). Este documento parte de un ejemplo con una ventana espacial de departamento (Antioquia) para la explicación detallada de cada paso, y finaliza con un loop de estimación para todos los departamentos de Colombia. Las entradas deben organizarse en una carpeta raíz [script/input](https://github.com/vicjulrin/MonitoreoFuegosBiodiversidad/tree/main/script/input), y nombrarse explícitamente en la parte inicial del código. Las salidas se almacenarán en la carpeta [script/output](https://github.com/vicjulrin/MonitoreoFuegosBiodiversidad/tree/main/script/output) sobre la misma raíz del código.
 
 ## 1. Organizar directorio de trabajo
-Las entradas de ejemplo de este ejercicio están almacenadas en [https://drive.google.com/drive/home](https://github.com/vicjulrin/MonitoreoFuegosBiodiversidad/tree/main/script/input) y deben organizarse en la carpeta raíz del código de la siguiente manera:
+Las entradas de ejemplo de este ejercicio están almacenadas en [https://drive.google.com/drive/home](https://github.com/vicjulrin/MonitoreoFuegosBiodiversidad/tree/main/script/input). Están organizadas de esta manera que facilita la ejecución del código:
 
 ```
 script
@@ -24,7 +24,7 @@ script
 │    
 └-input
 │ │
-│ └- Biomodelos2023 # Descargado de http://geonetwork.humboldt.org.co/geonetwork/srv/spa/catalog.search#/metadata/0a1a6bdf-3231-4a77-8031-0dc3fa40f21b
+│ └- Biomodelos2023 # Disponible en http://geonetwork.humboldt.org.co/geonetwork/srv/spa/catalog.search#/metadata/0a1a6bdf-3231-4a77-8031-0dc3fa40f21b
 │ │   └- presente
 │ │   │   │- sp_1.tif
 │ │   │   │- ...
@@ -32,11 +32,11 @@ script
 │ │   │- Biomodelos_registros.csv      
 │ │   │- listas_spp_natgeo_sib_2023.csv      
 │ │
-│ │- BIOMA_IAvH.gpkg
-│ │- IGAC_Depto.gpkg
-│ │- PuntosCalor_nats_fire_nrt_1223_01_24.shp
-│ │- redlist_ecosCol_Etter_2017.tif
-│ │-TemplateReporte.docx
+│ │- BIOMA_IAvH.gpkg # Disponible en http://www.ideam.gov.co/web/ecosistemas/mapa-ecosistemas-continentales-costeros-marinos
+│ │- IGAC_Depto.gpkg # Disponible en https://geoportal.igac.gov.co/contenido/datos-abiertos-cartografia-y-geografia
+│ │- PuntosCalor_nats_fire_nrt_1223_01_24.shp # Puntos de interes para el analisis
+│ │- redlist_ecosCol_Etter_2017.tif # Disponible en http://reporte.humboldt.org.co/biodiversidad/2017/cap2/204/
+│ │-TemplateReporte.docx # Plantilla de reporte
 │     
 └--output
 ```

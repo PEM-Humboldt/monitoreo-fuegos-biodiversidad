@@ -40,16 +40,15 @@ sobre la misma raíz del código.
 ## 1. Organizar directorio de trabajo
 
 Las entradas de ejemplo de este ejercicio están almacenadas en
-[https://drive.google.com/drive/home](https://github.com/vicjulrin/MonitoreoFuegosBiodiversidad/tree/main/script/input)
-y deben organizarse en la carpeta raíz del código de la siguiente
-manera:
+[https://drive.google.com/drive/home](https://github.com/vicjulrin/MonitoreoFuegosBiodiversidad/tree/main/script/input).
+Están organizadas de esta manera que facilita la ejecución del código:
 
     script
     │- Script Reporte PuntosCalor 2024.R
     │    
     └-input
     │ │
-    │ └- Biomodelos2023 # Descargado de http://geonetwork.humboldt.org.co/geonetwork/srv/spa/catalog.search#/metadata/0a1a6bdf-3231-4a77-8031-0dc3fa40f21b
+    │ └- Biomodelos2023 # Disponible en http://geonetwork.humboldt.org.co/geonetwork/srv/spa/catalog.search#/metadata/0a1a6bdf-3231-4a77-8031-0dc3fa40f21b
     │ │   └- presente
     │ │   │   │- sp_1.tif
     │ │   │   │- ...
@@ -57,11 +56,11 @@ manera:
     │ │   │- Biomodelos_registros.csv      
     │ │   │- listas_spp_natgeo_sib_2023.csv      
     │ │
-    │ │- BIOMA_IAvH.gpkg
-    │ │- IGAC_Depto.gpkg
-    │ │- PuntosCalor_nats_fire_nrt_1223_01_24.shp
-    │ │- redlist_ecosCol_Etter_2017.tif
-    │ │-TemplateReporte.docx
+    │ │- BIOMA_IAvH.gpkg # Disponible en http://www.ideam.gov.co/web/ecosistemas/mapa-ecosistemas-continentales-costeros-marinos
+    │ │- IGAC_Depto.gpkg # Disponible en https://geoportal.igac.gov.co/contenido/datos-abiertos-cartografia-y-geografia
+    │ │- PuntosCalor_nats_fire_nrt_1223_01_24.shp # Puntos de interes para el analisis
+    │ │- redlist_ecosCol_Etter_2017.tif # Disponible en http://reporte.humboldt.org.co/biodiversidad/2017/cap2/204/
+    │ │-TemplateReporte.docx # Plantilla de reporte
     │     
     └--output
 
