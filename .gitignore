@@ -1,0 +1,11 @@
+# Ignorar el directorio script/input/Biomodelos2023
+script/input/Biomodelos2023/
+
+# Ignorar archivos específicos en script/input
+script/input/BIOMA_IAvH.gpkg
+script/input/IGAC_Depto.gpkg
+script/input/PuntosCalor_nats_fire_nrt_1223_01_24.dbf
+script/input/PuntosCalor_nats_fire_nrt_1223_01_24.prj
+script/input/PuntosCalor_nats_fire_nrt_1223_01_24.shp
+script/input/PuntosCalor_nats_fire_nrt_1223_01_24.shx
+script/input/redlist_ecosCol_Etter_2017.tif
