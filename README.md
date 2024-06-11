@@ -7,10 +7,17 @@ author:
 affiliation: "Instituto de Investigación de Recursos Biológicos Alexander von Humboldt - IAvH"
 output: 
   md_document:
-    variant: gfm
+    md_extension: +gfm_auto_identifiers
     preserve_yaml: true
-    toc: false
+    toc: true
 ---
+
+-   [Organizar directorio de trabajo](#organizar-directorio-de-trabajo)
+-   [2. Organizar entorno de trabajo](#2-organizar-entorno-de-trabajo)
+    -   [2.1 Cargar librerias/paquetes necesarios para el
+        análisis](#21-cargar-libreriaspaquetes-necesarios-para-el-análisis)
+    -   [2.2 Establecer directorios de
+        trabajo](#22-establecer-directorios-de-trabajo)
 
 Este flujo de trabajo se desarrolló para monitorear la biodiversidad
 potencial asociada a puntos de fuego en Colombia. Sin embargo, en el
@@ -34,14 +41,9 @@ se almacenarán en la carpeta
 [script/output](https://github.com/vicjulrin/MonitoreoFuegosBiodiversidad/tree/main/script/output)
 sobre la misma raíz del código.
 
-## Tabla de contenido
+<a id="organizar-directorio-de-trabajo"></a>
 
-- [1. Organizar directorio de trabajo](#ID_seccion1)
-- [2. Organizar entorno de trabajo](#ID_seccion2)
-
-<a id="ID_seccion1"></a>
-
-## 1. Organizar directorio de trabajo
+## Organizar directorio de trabajo
 
 Las entradas de ejemplo de este ejercicio están almacenadas en
 [https://drive.google.com/drive/home](https://github.com/vicjulrin/MonitoreoFuegosBiodiversidad/tree/main/script/input).
@@ -68,55 +70,49 @@ Están organizadas de esta manera que facilita la ejecución del código:
     │     
     └--output
 
-<a id="ID_seccion2"></a>
-
 ## 2. Organizar entorno de trabajo
 
 ### 2.1 Cargar librerias/paquetes necesarios para el análisis
 
-``` r
-## Cargar librerias necesarias para el análisis ####
-# Lista de librerias necesarias
-packages_list<-list("this.path", "magrittr", "dplyr", "plyr", "pbapply", "data.table", "raster", "terra", "sf", "ggplot2", "ggpubr", 
-                    "tidyr", "RColorBrewer", "reshape2", "ggnewscale", "MASS", "stars",
-                    "tidyterra", "fasterize", "lwgeom", "officer", "ggspatial",
-                    "future", "future.apply", "progressr")
+    ## Cargar librerias necesarias para el análisis ####
+    # Lista de librerias necesarias
+    packages_list<-list("this.path", "magrittr", "dplyr", "plyr", "pbapply", "data.table", "raster", "terra", "sf", "ggplot2", "ggpubr", 
+                        "tidyr", "RColorBrewer", "reshape2", "ggnewscale", "MASS", "stars",
+                        "tidyterra", "fasterize", "lwgeom", "officer", "ggspatial",
+                        "future", "future.apply", "progressr")
 
-## Revisar e instalar librerias necesarias
-packagesPrev<- .packages(all.available = TRUE)
-lapply(packages_list, function(x) {   if ( ! x %in% packagesPrev ) { install.packages(x, force=T)}    })
+    ## Revisar e instalar librerias necesarias
+    packagesPrev<- .packages(all.available = TRUE)
+    lapply(packages_list, function(x) {   if ( ! x %in% packagesPrev ) { install.packages(x, force=T)}    })
 
-## Cargar librerias
-lapply(packages_list, library, character.only = TRUE)
-```
+    ## Cargar librerias
+    lapply(packages_list, library, character.only = TRUE)
 
 ### 2.2 Establecer directorios de trabajo
 
 El flujo de trabajo está diseñado para establecer el entorno de trabajo
 automáticamente a partir de la ubicación del código. Esto significa que
-tomará como “dir_work” la carpeta raiz donde se almacena el código
+tomará como “dir\_work” la carpeta raiz donde se almacena el código
 “~/scripts. De esta manera, se garantiza que la ejecución se realice
 bajo la misma organización descrita en el paso de [1.Organizar el
-directorio de trabajo](#ID_seccion1))
+directorio de trabajo](#organizar-directorio-de-trabajo))
 
-``` r
-# Establecer directorio
-dir_work<- this.path::this.path() %>% dirname() # espacio de trabajo donde se almacena el codigo actual
+    # Establecer directorio
+    dir_work<- this.path::this.path() %>% dirname() # espacio de trabajo donde se almacena el codigo actual
 
-# definir carpeta input
-input_folder<- file.path(dir_work, "input"); # "~/input"
+    # definir carpeta input
+    input_folder<- file.path(dir_work, "input"); # "~/input"
 
-input<- list(Bioma_IAvH= file.path(input_folder, "Bioma_IAvH.gpkg"), # Biomas IAvH - Mapa IGAC Biomas 2017 
-          redlist_ecos= file.path(input_folder,"redlist_ecosCol_Etter_2017.tif"), # Mapa de ecosistemas amenazados Etter http://reporte.humboldt.org.co/biodiversidad/2017/cap2/204/
-          biomodelos_folder= file.path(input_folder, "Biomodelos2023/presente"),  # Datos biomodelos de modelos, registrod y metadatos Descargado de http://geonetwork.humboldt.org.co/geonetwork/srv/spa/catalog.search#/metadata/0a1a6bdf-3231-4a77-8031-0dc3fa40f21b
-          biomodelos_metadata= file.path(input_folder,"Biomodelos2023/listas_spp_natgeo_sib_2023.csv"),
-          Biomodelos_records= file.path(input_folder,"Biomodelos2023/Biomodelos_registros.csv"),
-          template_reporte= file.path(input_folder,"TemplateReporte.docx"), 
-          n_density= 350,
-          PuntosCalor= file.path(input_folder,"PuntosCalor_nats_fire_nrt_1223_01_24.shp"),
-          IGAC_Deptos= file.path(input_folder, "IGAC_Depto.gpkg")
-          )
+    input<- list(Bioma_IAvH= file.path(input_folder, "Bioma_IAvH.gpkg"), # Biomas IAvH - Mapa IGAC Biomas 2017 
+              redlist_ecos= file.path(input_folder,"redlist_ecosCol_Etter_2017.tif"), # Mapa de ecosistemas amenazados Etter http://reporte.humboldt.org.co/biodiversidad/2017/cap2/204/
+              biomodelos_folder= file.path(input_folder, "Biomodelos2023/presente"),  # Datos biomodelos de modelos, registrod y metadatos Descargado de http://geonetwork.humboldt.org.co/geonetwork/srv/spa/catalog.search#/metadata/0a1a6bdf-3231-4a77-8031-0dc3fa40f21b
+              biomodelos_metadata= file.path(input_folder,"Biomodelos2023/listas_spp_natgeo_sib_2023.csv"),
+              Biomodelos_records= file.path(input_folder,"Biomodelos2023/Biomodelos_registros.csv"),
+              template_reporte= file.path(input_folder,"TemplateReporte.docx"), 
+              n_density= 350,
+              PuntosCalor= file.path(input_folder,"PuntosCalor_nats_fire_nrt_1223_01_24.shp"),
+              IGAC_Deptos= file.path(input_folder, "IGAC_Depto.gpkg")
+              )
 
-# crear carpeta output
-output<- file.path(dir_work, "output"); dir.create(output)
-```
+    # crear carpeta output
+    output<- file.path(dir_work, "output"); dir.create(output)
