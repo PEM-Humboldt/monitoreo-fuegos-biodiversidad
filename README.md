@@ -31,9 +31,9 @@ entrada). Este documento parte de un ejemplo con una ventana espacial de
 departamento (Antioquia) para la explicación detallada de cada paso, y
 finaliza con un loop de estimación para todos los departamentos de
 Colombia. Las entradas deben organizarse en una carpeta raíz ([Figura
-1](#ID_fig1)), y nombrarse explícitamente en la parte inicial del
-código. Las salidas se almacenarán en la carpeta `output` sobre la misma
-raíz del código.
+1](https://stackoverflow.com/questions/60492122/in-rmarkdown-can-a-floating-toc-be-placed-on-the-right-side-of-page)),
+y nombrarse explícitamente en la parte inicial del código. Las salidas
+se almacenarán en la carpeta `output` sobre la misma raíz del código.
 
 ## 1. Organizar entorno de trabajo
 
