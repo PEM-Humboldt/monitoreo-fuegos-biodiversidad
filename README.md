@@ -9,15 +9,8 @@ output:
   md_document:
     variant: gfm
     preserve_yaml: true
-    toc: true
+    toc: false
 ---
-
-- [1. Organizar directorio de trabajo](#organizar-directorio-de-trabajo)
-- [2. Organizar entorno de trabajo](#organizar-entorno-de-trabajo)
-  - [2.1 Cargar librerias/paquetes necesarios para el
-    análisis](#cargar-libreriaspaquetes-necesarios-para-el-análisis)
-  - [2.2 Establecer directorios de
-    trabajo](#establecer-directorios-de-trabajo)
 
 Este flujo de trabajo se desarrolló para monitorear la biodiversidad
 potencial asociada a puntos de fuego en Colombia. Sin embargo, en el
@@ -41,7 +34,12 @@ se almacenarán en la carpeta
 [script/output](https://github.com/vicjulrin/MonitoreoFuegosBiodiversidad/tree/main/script/output)
 sobre la misma raíz del código.
 
-<a id="organizar-directorio-de-trabajo"></a>
+## Tabla de contenido
+
+- [1. Organizar directorio de trabajo](#ID_seccion1)
+- [2. Organizar entorno de trabajo](#ID_seccion2)
+
+<a id="ID_seccion1"></a>
 
 ## 1. Organizar directorio de trabajo
 
@@ -70,6 +68,8 @@ Están organizadas de esta manera que facilita la ejecución del código:
     │     
     └--output
 
+<a id="ID_seccion2"></a>
+
 ## 2. Organizar entorno de trabajo
 
 ### 2.1 Cargar librerias/paquetes necesarios para el análisis
@@ -97,7 +97,7 @@ automáticamente a partir de la ubicación del código. Esto significa que
 tomará como “dir_work” la carpeta raiz donde se almacena el código
 “~/scripts. De esta manera, se garantiza que la ejecución se realice
 bajo la misma organización descrita en el paso de [1.Organizar el
-directorio de trabajo](#organizar-directorio-de-trabajo))
+directorio de trabajo](#ID_seccion1))
 
 ``` r
 # Establecer directorio
