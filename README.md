@@ -17,7 +17,34 @@ output:
 Flujo de trabajo – Análisis general de biodiversidad en puntos de
 calor/fuegos en Colombia
 ================
-truetrue
+
+Este flujo de trabajo se desarrolló para monitorear la biodiversidad
+potencial asociada a puntos de fuego en Colombia. Sin embargo, en el
+momento que se generó la información de fuegos no estaba disponible, por
+lo que se estimó a partir de datos de puntos de calor.
+
+Este flujo permite la estimación de métricas de biodiversidad asociadas
+a los puntos que se dispongan en la ventana espacial de análisis
+requerida, respaldado en la información de Biomodelos y ecosistemas
+amenazados, en relación con Biomas IAvH como unidad ecológica de
+análisis. La importancia de este enfoque radica en facilitar un código
+para analizar estas dinámicas en diferentes escalas y contextos, siendo
+particularmente útil para realizar análisis en diferentes territorios y
+apoyar la toma de decisiones de gestión.
+
+El flujo de trabajo está desarrollado en R software y automatizado para
+analizarse en cualquier ventana espacial de análisis (por ejemplo,
+departamentos) y temporal de análisis (dependiendo de los puntos de
+entrada). Este documento parte de un ejemplo con una ventana espacial de
+departamento (Antioquia) para la explicación detallada de cada paso, y
+finaliza con un loop de estimación para todos los departamentos de
+Colombia. Las entradas deben organizarse en una carpeta raíz
+[script/input](https://github.com/vicjulrin/MonitoreoFuegosBiodiversidad/tree/main/script/input),
+y nombrarse explícitamente en la parte inicial del código. Las salidas
+se almacenarán en la carpeta “script/output” sobre la misma raíz del
+código.
+
+# Tabla de contenido
 
 - [Organizar directorio de trabajo](#organizar-directorio-de-trabajo)
 - [Organizar entorno de trabajo](#organizar-entorno-de-trabajo)
@@ -49,31 +76,6 @@ truetrue
 - [Ejemplo - Analisis multiple - Loop
   paralelo](#ejemplo---analisis-multiple---loop-paralelo)
 
-Este flujo de trabajo se desarrolló para monitorear la biodiversidad
-potencial asociada a puntos de fuego en Colombia. Sin embargo, en el
-momento que se generó la información de fuegos no estaba disponible, por
-lo que se estimó a partir de datos de puntos de calor.
-
-Este flujo permite la estimación de métricas de biodiversidad asociadas
-a los puntos que se dispongan en la ventana espacial de análisis
-requerida, respaldado en la información de Biomodelos y ecosistemas
-amenazados, en relación con Biomas IAvH como unidad ecológica de
-análisis. La importancia de este enfoque radica en facilitar un código
-para analizar estas dinámicas en diferentes escalas y contextos, siendo
-particularmente útil para realizar análisis en diferentes territorios y
-apoyar la toma de decisiones de gestión.
-
-El flujo de trabajo está desarrollado en R software y automatizado para
-analizarse en cualquier ventana espacial de análisis (por ejemplo,
-departamentos) y temporal de análisis (dependiendo de los puntos de
-entrada). Este documento parte de un ejemplo con una ventana espacial de
-departamento (Antioquia) para la explicación detallada de cada paso, y
-finaliza con un loop de estimación para todos los departamentos de
-Colombia. Las entradas deben organizarse en una carpeta raíz
-[script/input](https://github.com/vicjulrin/MonitoreoFuegosBiodiversidad/tree/main/script/input),
-y nombrarse explícitamente en la parte inicial del código. Las salidas
-se almacenarán en la carpeta “script/output” sobre la misma raíz del
-código.
 
 <a id="ID_seccion1"></a>
 
