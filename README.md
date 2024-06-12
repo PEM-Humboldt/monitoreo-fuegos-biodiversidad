@@ -44,7 +44,7 @@ y nombrarse explícitamente en la parte inicial del código. Las salidas
 se almacenarán en la carpeta “script/output” sobre la misma raíz del
 código.
 
-# Tabla de contenido
+### Tabla de contenido
 
 - [Organizar directorio de trabajo](#organizar-directorio-de-trabajo)
 - [Organizar entorno de trabajo](#organizar-entorno-de-trabajo)
