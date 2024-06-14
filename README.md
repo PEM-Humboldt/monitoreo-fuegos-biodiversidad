@@ -1,9 +1,6 @@
-Flujo de trabajo – Análisis general de biodiversidad en puntos de
-calor/fuegos en Colombia
-================
-
 ---
 title: "Flujo de trabajo – Análisis general de biodiversidad en puntos de calor/fuegos en Colombia"
+
 author: 
   - name: "Rincon-Parra VJ"
     email: "rincon-v@javeriana.edu.co"
@@ -17,6 +14,9 @@ output:
     toc: true
     toc_depth: 4
 ---
+
+Flujo de trabajo – Análisis general de biodiversidad en puntos de calor/fuegos en Colombia
+================
 
 Este flujo de trabajo se desarrolló para monitorear la biodiversidad
 potencial asociada a puntos de fuego en Colombia. Sin embargo, en el
